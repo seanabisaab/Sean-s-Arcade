@@ -7,9 +7,7 @@ Arcade of classic games. Created using Html, CSS, and javascript.
 
 Games List:
 
-
 Rock Paper Scissors
-
 
 Snake
 
