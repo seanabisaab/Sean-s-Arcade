@@ -239,23 +239,23 @@ header {
 
 /* Games */
 
-.my-work {
+.my-games {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;    
 }
 
-.portfolio {
+.game {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.portfolio__item {
+.game__item {
     background: var(--clr-accent);
     overflow: hidden;
 }
 
-.portfolio__img {
+.game__img {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
@@ -267,13 +267,13 @@ header {
 
 }
 
-.portfolio__item:focus {
+.game__item:focus {
     position: relative;
     z-index: 2;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
+.game__img:hover,
+.game__item:focus .game__img {
     transform: scale(1.2);
     opacity: .5;
 }
@@ -325,15 +325,15 @@ header {
 }
 
 
-/* Individual portfolio item styles */
+/* Individual game item styles */
 
-.portfolio-item-individual {
+.game-item-individual {
     padding: 0 2em 2em;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.portfolio-item-individual p {
+.game-item-individual p {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
