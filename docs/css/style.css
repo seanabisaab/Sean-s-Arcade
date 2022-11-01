@@ -368,14 +368,14 @@ header {
     background-color: var(--clr-dark);
   }
 
-  /* Snake */
-  .snake {
-    background-color: var(--clr-dark);
-  }
-
   .grid {
     display: flex;
     flex-wrap: wrap;
     width: 200px;
     height: 300px;
+  }
+
+  /* Snake */
+  .snake {
+    background-color: var(--clr-dark);
   }

@@ -15,51 +15,51 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArray = [
     {
       name: 'viktor',
-      img: 'img/viktor.PNG'
+      img: 'img/viktor.png'
     },
     {
       name: 'ziggs',
-      img: 'img/ziggs.PNG'
+      img: 'img/ziggs.png'
     },
     {
       name: 'veigar',
-      img: 'img/veigar.PNG'
+      img: 'img/veigar.png'
     },
     {
       name: 'ryze',
-      img: 'img/ryze.PNG'
+      img: 'img/ryze.png'
     },
     {
       name: 'cass',
-      img: 'img/cass.PNG'
+      img: 'img/cass.png'
     },
     {
       name: 'fizz',
-      img: 'img/fizz.PNG'
+      img: 'img/fizz.png'
     },
     {
       name: 'viktor',
-      img: 'img/viktor.PNG'
+      img: 'img/viktor.png'
     },
     {
       name: 'ziggs',
-      img: 'img/ziggs.PNG'
+      img: 'img/ziggs.png'
     },
     {
       name: 'veigar',
-      img: 'img/veigar.PNG'
+      img: 'img/veigar.png'
     },
     {
       name: 'ryze',
-      img: 'img/ryze.PNG'
+      img: 'img/ryze.png'
     },
     {
       name: 'cass',
-      img: 'img/cass.PNG'
+      img: 'img/cass.png'
     },
     {
       name: 'fizz',
-      img: 'img/fizz.PNG'
+      img: 'img/fizz.png'
     }
   ]
 
@@ -70,7 +70,7 @@ const cardArray = [
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img')
-      card.setAttribute('src', 'img/blank.jpg')
+      card.setAttribute('src', 'img/blank.png')
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
@@ -83,20 +83,20 @@ const cardArray = [
     const optionTwoId = cardsChosenId[1]
     
     if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src', 'img/blank.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
+      cards[optionOneId].setAttribute('src', 'img/blank.png')
+      cards[optionTwoId].setAttribute('src', 'img/blank.png')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-      cards[optionOneId].setAttribute('src', 'img/correct.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/correct.jpg')
+      cards[optionOneId].setAttribute('src', 'img/correct.png')
+      cards[optionTwoId].setAttribute('src', 'img/correct.png')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', 'images/blank.jpg')
-      cards[optionTwoId].setAttribute('src', 'images/blank.jpg')
+      cards[optionOneId].setAttribute('src', 'img/blank.png')
+      cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
     }
     cardsChosen = []
