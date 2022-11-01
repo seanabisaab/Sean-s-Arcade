@@ -376,6 +376,6 @@ header {
   .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 200px;
     height: 300px;
   }
