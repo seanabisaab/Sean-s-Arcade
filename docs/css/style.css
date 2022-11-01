@@ -364,3 +364,18 @@ header {
 
 
 /* Memory Game */
+.match {
+    background-color: var(--clr-dark);
+  }
+
+  /* Snake */
+  .snake {
+    background-color: var(--clr-dark);
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+  }
