@@ -368,11 +368,11 @@ header {
     background-color: var(--clr-dark);
   }
 
-  .grid {
+  .matchgrid {
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
-    height: 300px;
+    width: 600px;
+    height: 450px;
   }
 
   /* Snake */
