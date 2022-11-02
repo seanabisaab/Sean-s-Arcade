@@ -343,6 +343,9 @@ header {
   .rps {
     background-color: var(--clr-dark);
   }
+  .rpstxt {
+    height: 200px;
+  }
   
   .btn {
     display: inline-block;
