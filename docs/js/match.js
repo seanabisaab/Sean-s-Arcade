@@ -1,89 +1,96 @@
 document.addEventListener('DOMContentLoaded', () => {
-const cardArray = [
+  //card options
+  const cardArray = [
     {
       name: 'viktor',
-      img: 'img/viktor.png'
-    },
-    {
-      name: 'ziggs',
-      img: 'img/ziggs.png'
+      img: 'img/viktor.jpg'
     },
     {
       name: 'veigar',
-      img: 'img/veigar.png'
-    },
-    {
-      name: 'ryze',
-      img: 'img/ryze.png'
+      img: 'img/veigar.jpg'
     },
     {
       name: 'cass',
-      img: 'img/cass.png'
+      img: 'img/cass.jpg'
     },
     {
-      name: 'fizz',
-      img: 'img/fizz.png'
-    },
-    {
-      name: 'viktor',
-      img: 'img/viktor.png'
+      name: 'ryze',
+      img: 'img/ryze.jpg'
     },
     {
       name: 'ziggs',
-      img: 'img/ziggs.png'
-    },
-    {
-      name: 'veigar',
-      img: 'img/veigar.png'
-    },
-    {
-      name: 'ryze',
-      img: 'img/ryze.png'
-    },
-    {
-      name: 'cass',
-      img: 'img/cass.png'
+      img: 'img/ziggs.jpg'
     },
     {
       name: 'fizz',
-      img: 'img/fizz.png'
+      img: 'img/fizz.jpg'
+    },
+    {
+      name: 'viktor',
+      img: 'img/viktor.jpg'
+    },
+    {
+      name: 'veigar',
+      img: 'img/veigar.jpg'
+    },
+    {
+      name: 'cass',
+      img: 'img/cass.jpg'
+    },
+    {
+      name: 'ryze',
+      img: 'img/ryze.jpg'
+    },
+    {
+      name: 'ziggs',
+      img: 'img/ziggs.jpg'
+    },
+    {
+      name: 'fizz',
+      img: 'img/fizz.jpg'
     }
   ]
 
   cardArray.sort(() => 0.5 - Math.random())
 
   const grid = document.querySelector('.grid')
+  const resultDisplay = document.querySelector('#result')
+  let cardsChosen = []
+  let cardsChosenId = []
+  let cardsWon = []
 
+  //create your board
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img')
-      card.setAttribute('src', 'img/blank.png')
+      card.setAttribute('src', 'img/blank.jpg')
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
     }
   }
 
+  //check for matches
   function checkForMatch() {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
     
     if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src', 'img/blank.png')
-      cards[optionTwoId].setAttribute('src', 'img/blank.png')
+      cards[optionOneId].setAttribute('src', 'img/blank.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-      cards[optionOneId].setAttribute('src', 'img/correct.png')
-      cards[optionTwoId].setAttribute('src', 'img/correct.png')
+      cards[optionOneId].setAttribute('src', 'img/correct.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/correct.jpg')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', 'img/blank.png')
-      cards[optionTwoId].setAttribute('src', 'images/blank.png')
+      cards[optionOneId].setAttribute('src', 'img/blank.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
       alert('Sorry, try again')
     }
     cardsChosen = []
@@ -94,6 +101,7 @@ const cardArray = [
     }
   }
 
+  //flip your card
   function flipCard() {
     let cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
