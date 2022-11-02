@@ -39,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
       img: 'img/fizz.jpg'
     },
     {
+      name: 'syndra',
+      img: 'img/syndra.jpg'
+    },
+    {
+      name: 'xerath',
+      img: 'img/xerath.jpg'
+    },
+    {
+      name: 'azir',
+      img: 'img/azir.jpg'
+    },
+    {
       name: 'viktor',
       img: 'img/viktor.jpg'
     },
@@ -61,6 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'fizz',
       img: 'img/fizz.jpg'
+    },
+    {
+      name: 'syndra',
+      img: 'img/syndra.jpg'
+    },
+    {
+      name: 'xerath',
+      img: 'img/xerath.jpg'
+    },
+    {
+      name: 'azir',
+      img: 'img/azir.jpg'
     }
   ]
 
