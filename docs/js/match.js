@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      cards[optionOneId].setAttribute('src', 'img/correct.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/correct.jpg')
+      cards[optionOneId].setAttribute('src', 'img/grey.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/grey.jpg')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
