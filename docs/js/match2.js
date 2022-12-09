@@ -15,76 +15,76 @@ document.addEventListener('DOMContentLoaded', () => {
   //card options
   const cardArray = [
     {
-      name: 'viktor',
-      img: 'img/viktor.jpg'
+      name: 'harry',
+      img: 'img/harry.jpg'
     },
     {
-      name: 'veigar',
-      img: 'img/veigar.jpg'
+      name: 'ron',
+      img: 'img/ron.jpg'
     },
     {
-      name: 'cass',
-      img: 'img/cass.jpg'
+      name: 'ginny',
+      img: 'img/ginny.jpg'
     },
     {
-      name: 'ryze',
-      img: 'img/ryze.jpg'
+      name: 'arthur',
+      img: 'img/arthur.jpg'
     },
     {
-      name: 'ziggs',
-      img: 'img/ziggs.jpg'
+      name: 'molly',
+      img: 'img/molly.jpg'
     },
     {
-      name: 'fizz',
-      img: 'img/fizz.jpg'
+      name: 'fred',
+      img: 'img/fred.jpg'
     },
     {
-      name: 'syndra',
-      img: 'img/syndra.jpg'
+      name: 'george',
+      img: 'img/george.jpg'
     },
     {
-      name: 'xerath',
-      img: 'img/xerath.jpg'
+      name: 'bill',
+      img: 'img/bill.jpg'
     },
     {
-      name: 'azir',
-      img: 'img/azir.jpg'
+      name: 'percy',
+      img: 'img/percy.jpg'
     },
     {
-      name: 'viktor',
-      img: 'img/viktor.jpg'
+      name: 'harry',
+      img: 'img/harry.jpg'
     },
     {
-      name: 'veigar',
-      img: 'img/veigar.jpg'
+      name: 'ron',
+      img: 'img/ron.jpg'
     },
     {
-      name: 'cass',
-      img: 'img/cass.jpg'
+      name: 'ginny',
+      img: 'img/ginny.jpg'
     },
     {
-      name: 'ryze',
-      img: 'img/ryze.jpg'
+      name: 'arthur',
+      img: 'img/arthur.jpg'
     },
     {
-      name: 'ziggs',
-      img: 'img/ziggs.jpg'
+      name: 'molly',
+      img: 'img/molly.jpg'
     },
     {
-      name: 'fizz',
-      img: 'img/fizz.jpg'
+      name: 'fred',
+      img: 'img/fred.jpg'
     },
     {
-      name: 'syndra',
-      img: 'img/syndra.jpg'
+      name: 'george',
+      img: 'img/george.jpg'
     },
     {
-      name: 'xerath',
-      img: 'img/xerath.jpg'
+      name: 'bill',
+      img: 'img/bill.jpg'
     },
     {
-      name: 'azir',
-      img: 'img/azir.jpg'
+      name: 'percy',
+      img: 'img/percy.jpg'
     }
   ]
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img')
-      card.setAttribute('src', 'img/blank.jpg')
+      card.setAttribute('src', 'img/wiz.jpg')
       card.setAttribute('data-id', i)
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
@@ -114,18 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionTwoId = cardsChosenId[1]
     
     if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src', 'img/blank.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
+      cards[optionOneId].setAttribute('src', 'img/wiz.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/wiz.jpg')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      cards[optionOneId].setAttribute('src', 'img/correct.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/correct.jpg')
+      cards[optionOneId].setAttribute('src', 'img/cor.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/cor.jpg')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', 'img/blank.jpg')
-      cards[optionTwoId].setAttribute('src', 'img/blank.jpg')
+      cards[optionOneId].setAttribute('src', 'img/wiz.jpg')
+      cards[optionTwoId].setAttribute('src', 'img/wiz.jpg')
     }
     cardsChosen = []
     cardsChosenId = []
