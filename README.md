@@ -9,7 +9,9 @@ Games List:
 
 Rock Paper Scissors
 
-Matching Game
+LOL Matching Game
+
+Weasely Matching Game
 
 Snake (Under Construction)
 
